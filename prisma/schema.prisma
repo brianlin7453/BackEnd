@@ -11,12 +11,14 @@ datasource db {
 }
 
 model Inventory {
-  serial_number String  @unique
-  brand_name    String
-  volume        String
-  retail_price  Float
-  on_sale       Boolean
-  sale_price    Float?
+  barcode      String  @unique
+  manufacturer String
+  type         String
+  volume       String
+  retail_price Float
+  on_sale      Boolean
+  sale_price   Float?
+  description  String?
 }
 
 model Logos {

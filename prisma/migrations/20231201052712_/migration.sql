@@ -1,13 +1,15 @@
 -- CreateTable
 CREATE TABLE `Inventory` (
-    `serial_number` VARCHAR(191) NOT NULL,
-    `brand_name` VARCHAR(191) NOT NULL,
+    `barcode` VARCHAR(191) NOT NULL,
+    `manufacturer` VARCHAR(191) NOT NULL,
+    `type` VARCHAR(191) NOT NULL,
     `volume` VARCHAR(191) NOT NULL,
     `retail_price` DOUBLE NOT NULL,
     `on_sale` BOOLEAN NOT NULL,
-    `sale_price` DOUBLE NOT NULL,
+    `sale_price` DOUBLE NULL,
+    `description` VARCHAR(191) NULL,
 
-    UNIQUE INDEX `Inventory_serial_number_key`(`serial_number`)
+    UNIQUE INDEX `Inventory_barcode_key`(`barcode`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
